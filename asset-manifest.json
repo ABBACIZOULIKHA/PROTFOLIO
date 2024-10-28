@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PROTFOLIO/static/css/main.2a69a35e.css",
-    "main.js": "/PROTFOLIO/static/js/main.142a6d89.js",
+    "main.js": "/PROTFOLIO/static/js/main.f91f0848.js",
     "static/media/MyPhoto2.jpg": "/PROTFOLIO/static/media/MyPhoto2.977e602c9914c02b3845.jpg",
     "static/media/VehiculeComparator.png": "/PROTFOLIO/static/media/VehiculeComparator.2c4d26ef9a7de0d32cba.png",
     "static/media/RealState.png": "/PROTFOLIO/static/media/RealState.27d9dcd1453ddd77beb4.png",
@@ -12,10 +12,10 @@
     "static/media/Ecommerce.png": "/PROTFOLIO/static/media/Ecommerce.5dfabb7f7b09cfd536c9.png",
     "index.html": "/PROTFOLIO/index.html",
     "main.2a69a35e.css.map": "/PROTFOLIO/static/css/main.2a69a35e.css.map",
-    "main.142a6d89.js.map": "/PROTFOLIO/static/js/main.142a6d89.js.map"
+    "main.f91f0848.js.map": "/PROTFOLIO/static/js/main.f91f0848.js.map"
   },
   "entrypoints": [
     "static/css/main.2a69a35e.css",
-    "static/js/main.142a6d89.js"
+    "static/js/main.f91f0848.js"
   ]
 }
