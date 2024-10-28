@@ -31,9 +31,9 @@ const About = () => {
               </div>
               <br />
               <br />
-              <a href="./src/assets/Code_a_program.pdf" download>
+              {/* <a href="./src/assets/Code_a_program.pdf" download> */}
                 <button className="btn-primary bg-cyan-600 rounded-md px-2 py-1 ">Download CV</button>
-              </a>
+              {/* </a> */}
             </div>
           </div>
           
