@@ -5,7 +5,8 @@ import project3 from "../images/ParkingManaging/Parking.png";
 import project4 from "../images/VehicleWebSite/VehiculeComparator.png";
 import project5 from "../images/Etourisme/Etorisme.png";
 import project6 from "../images/RealState/RealState.png";
-import project7 from "../images/BookStore/BookStore.png";
+import project7 from "../images/project7.png";
+import project8 from "../images/project8.png";
 
 export default function Project() {
   const projects = [
@@ -64,9 +65,10 @@ export default function Project() {
     {
       img: project8,
       name: "E_learning_management-",
-      techs: ["Html", "CSS"],
+      techs: ["Next.js ","Tailwind CSS", "Amazon DynamoDB"],
       github_link: ["https://github.com/ABBACIZOULIKHA/E_learning_management-"],
     },
+
   ];
 
   const [visibleCount, setVisibleCount] = useState(3); // Number of projects initially visible
