@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/PROTFOLIO/static/css/main.2a69a35e.css",
-    "main.js": "/PROTFOLIO/static/js/main.f91f0848.js",
+    "main.js": "/PROTFOLIO/static/js/main.658d713e.js",
     "static/media/MyPhoto2.jpg": "/PROTFOLIO/static/media/MyPhoto2.977e602c9914c02b3845.jpg",
+    "static/media/project8.png": "/PROTFOLIO/static/media/project8.91c2f1c15bdea8e1c53f.png",
     "static/media/VehiculeComparator.png": "/PROTFOLIO/static/media/VehiculeComparator.2c4d26ef9a7de0d32cba.png",
+    "static/media/project7.png": "/PROTFOLIO/static/media/project7.34f69fde2203049cbab7.png",
     "static/media/RealState.png": "/PROTFOLIO/static/media/RealState.27d9dcd1453ddd77beb4.png",
     "static/media/Etorisme.png": "/PROTFOLIO/static/media/Etorisme.c856d5ab5074d647b17a.png",
     "static/media/EasyLaw.png": "/PROTFOLIO/static/media/EasyLaw.6d9ca7d1f4e33a1912f3.png",
-    "static/media/BookStore.png": "/PROTFOLIO/static/media/BookStore.1ea750b702c1edbc3881.png",
     "static/media/Parking.png": "/PROTFOLIO/static/media/Parking.f90b27dc57c4b1a9a857.png",
     "static/media/Ecommerce.png": "/PROTFOLIO/static/media/Ecommerce.5dfabb7f7b09cfd536c9.png",
     "index.html": "/PROTFOLIO/index.html",
     "main.2a69a35e.css.map": "/PROTFOLIO/static/css/main.2a69a35e.css.map",
-    "main.f91f0848.js.map": "/PROTFOLIO/static/js/main.f91f0848.js.map"
+    "main.658d713e.js.map": "/PROTFOLIO/static/js/main.658d713e.js.map"
   },
   "entrypoints": [
     "static/css/main.2a69a35e.css",
-    "static/js/main.f91f0848.js"
+    "static/js/main.658d713e.js"
   ]
 }
