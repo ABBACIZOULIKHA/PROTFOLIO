@@ -56,9 +56,16 @@ export default function Project() {
     },
     {
       img: project7,
-      name: "Bookstore Web Platform",
-      techs: ["React.js", "Tailwind CSS", "Redux.js"],
-      github_link: ["https://github.com/Sridhar-C-25"],
+      name: "DevOps Engineer Portfolio",
+      techs: ["Html", "CSS"],
+      github_link: ["https://github.com/ABBACIZOULIKHA/DevopsEngPortflio"],
+      Live:"https://abbacizoulikha.github.io/DevopsEngPortflio/"
+    },
+    {
+      img: project8,
+      name: "E_learning_management-",
+      techs: ["Html", "CSS"],
+      github_link: ["https://github.com/ABBACIZOULIKHA/E_learning_management-"],
     },
   ];
 
