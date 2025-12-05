@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React from "react";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
 import project1 from "../images/EasyLaw/EasyLaw.png";
 import project2 from "../images/Ecommerce/Ecommerce.png";
 import project3 from "../images/ParkingManaging/Parking.png";
@@ -7,134 +10,197 @@ import project5 from "../images/Etourisme/Etorisme.png";
 import project6 from "../images/RealState/RealState.png";
 import project7 from "../images/project7.png";
 import project8 from "../images/project8.png";
+import project9 from "../images/BookStore/BookStore.png";
+import project10 from "../images/Project10.png";
+import project11 from "../images/Project11.png";
+import project12 from "../images/Project12.png";
+import project13 from "../images/Project13.png";
+import project14 from "../images/Project14.png";
 
-export default function Project() {
+export default function Projects() {
+
   const projects = [
+    {
+      img: project14,
+      name: "Phone Usage Detection",
+      techs: ["Deep learning", "Computer vision", "YoloV8", "PyTorch", "OpenCV"],
+      github: [
+        "https://github.com/ABBACIZOULIKHA/Phone_Usage_Detection"]
+    },
+    {
+      img: project13,
+      name: "Wheat Gard Platform: AI System for Wheat Disease & Pest Management",
+      techs: ["Deep learning", "machine learning", "Computer vision", "Flask"," React","convolutional neural networks"],
+      github: [
+        "https://github.com/ABBACIZOULIKHA/PFE_Project"]
+    },
     {
       img: project1,
       name: "Intelligent Legal Monitoring Platform",
-      techs: ["React.js", "Tailwind CSS", "Flask", "Selenium", "PostgreSQL"],
-      github_link: [
+      techs: ["React", "Flask", "Selenium", "PostgreSQL"],
+      github: [
         "https://github.com/ABBACIZOULIKHA/IntelligentLegalMonitoringPlatform_Backend",
-        "https://github.com/ABBACIZOULIKHA/IntelligentLegalMonitoringPlatform_FrontEnd",
-      ],
+        "https://github.com/ABBACIZOULIKHA/IntelligentLegalMonitoringPlatform_FrontEnd"
+      ]
     },
     {
       img: project2,
-      name: "Ecommerce Application",
-      techs: ["React.js", "Tailwind CSS", "Node.js", "OracleDB"],
-      github_link: [
+      name: "E-Commerce Application",
+      techs: ["React", "Node.js", "Oracle DB"],
+      github: [
         "https://github.com/ABBACIZOULIKHA/EcomerceAPP_OracleDB",
-        "https://github.com/ABBACIZOULIKHA/EcomerceContainerisationDB",
-      ],
+        "https://github.com/ABBACIZOULIKHA/EcomerceContainerisationDB"
+      ]
     },
     {
       img: project3,
-      name: "Parking Managing Mobile Application",
-      techs: ["Kotlin", "Node.js", "MySQL"],
-      github_link: [
+      name: "Parking Mobile App",
+      techs: ["Kotlin", "Node", "MySQL"],
+      github: [
         "https://github.com/ABBACIZOULIKHA/ParkingMobileApplication",
-        "https://github.com/ABBACIZOULIKHA/ParkingManaging-",
-      ],
+        "https://github.com/ABBACIZOULIKHA/ParkingManaging-"
+      ]
     },
     {
       img: project4,
-      name: "Vehicle Comparison Website",
-      techs: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      github_link: ["https://github.com/ABBACIZOULIKHA/VehicleComparisonWebsite"],
+      name: "Vehicle Comparator",
+      techs: ["PHP", "JavaScript", "MySQL"],
+      github: ["https://github.com/ABBACIZOULIKHA/VehicleComparisonWebsite"]
     },
     {
       img: project5,
-      name: "E-Tourism Management",
-      techs: ["React.js", "Tailwind CSS", "Firebase"],
-      github_link: ["https://github.com/ABBACIZOULIKHA/dzayergoApp"],
+      name: "E-Tourism Platform",
+      techs: ["React", "Firebase"],
+      github: ["https://github.com/ABBACIZOULIKHA/dzayergoApp"]
     },
     {
       img: project6,
-      name: "Real Estate Listings Management Platform",
-      techs: ["React.js", "Tailwind CSS", "Django", "MySQL"],
-      github_link: ["https://github.com/ABBACIZOULIKHA/TP_IGL/tree/main"],
+      name: "Real Estate System",
+      techs: ["React", "Django", "MySQL"],
+      github: ["https://github.com/ABBACIZOULIKHA/TP_IGL"]
     },
-    {
-      img: project7,
-      name: "DevOps Engineer Portfolio",
-      techs: ["Html", "CSS"],
-      github_link: ["https://github.com/ABBACIZOULIKHA/DevopsEngPortflio"],
-      Live:"https://abbacizoulikha.github.io/DevopsEngPortflio/"
-    },
+    // {
+    //   img: project7,
+    //   name: "DevOps Portfolio",
+    //   techs: ["HTML", "CSS"],
+    //   github: ["https://github.com/ABBACIZOULIKHA/DevopsEngPortflio"],
+    //   live: "https://abbacizoulikha.github.io/DevopsEngPortflio/"
+    // },
     {
       img: project8,
-      name: "E_learning_management-",
-      techs: ["Next.js ","Tailwind CSS", "Amazon DynamoDB"],
-      github_link: ["https://github.com/ABBACIZOULIKHA/E_learning_management-"],
+      name: "E-Learning Platform",
+      techs: ["Next.js", "DynamoDB"],
+      github: ["https://github.com/ABBACIZOULIKHA/E_learning_management-"]
     },
-
+    {
+      img: project9,
+      name: "Library Backend",
+      techs: ["Spring Boot", "PostgreSQL"],
+      github: ["https://github.com/ABBACIZOULIKHA/library-management-system-springboot"]
+    },
+    {
+      img: project10,
+      name: "Healthcare Analytics",
+      techs: ["Snowflake", "dbt", "Power BI"],
+      github: ["https://github.com/ABBACIZOULIKHA/dbt-healthcare-analytics"]
+    },
+    {
+      img: project11,
+      name: "Traffic Speed Predictor",
+      techs: ["Python", "PyTorch", "Streamlit"],
+      github: ["https://github.com/ABBACIZOULIKHA/Traffic-Speed-Predictor"]
+    },
+    {
+      img: project12,
+      name: "Customer Churn ML",
+      techs: ["Python", "sklearn", "pandas"],
+      github: ["https://github.com/ABBACIZOULIKHA/Customer-Churn-Prediction"]
+    },
   ];
 
-  const [visibleCount, setVisibleCount] = useState(3); // Number of projects initially visible
-
-  const handleSeeMore = () => {
-    setVisibleCount((prevCount) => prevCount + 3); // Increase by 3 or any number of projects you prefer
-  };
-
   return (
-    <section id="projects" className="py-5 bg-white dark:bg-gray-900">
-      <div className="text-center">
-        <h3 className="text-4xl font-semibold text-gray-900 dark:text-white">
-          My <span className="text-cyan-600">Projects</span>
-        </h3>
-        <p className="text-gray-600 dark:text-gray-300 mt-3 text-lg">My awesome works</p>
+    <section
+      id="projects"
+      className="relative py-12 overflow-hidden bg-white/60 dark:bg-gray-900 text-gray-900 dark:text-white"
+    >
+
+      {/* GLOW BACKGROUND */}
+      <div className="absolute w-[450px] h-[450px] bg-cyan-600/20 rounded-full blur-[160px] top-[-140px] left-[-100px]" />
+      <div className="absolute w-[450px] h-[450px] bg-purple-600/10 rounded-full blur-[160px] bottom-[-140px] right-[-100px]" />
+
+      <div className="relative z-10 text-center mb-14">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold"
+        >
+          Project <span className="text-cyan-500">Showcase</span>
+        </motion.h2>
+        <p className="text-gray-600 dark:text-gray-400 mt-2">
+          Software • AI • Data Engineering • Research Systems
+        </p>
       </div>
-      <br />
-      <div className="px-4 sm:px-6 lg:px-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {projects.slice(0, visibleCount).map((project, i) => (
-            <div key={i} className="bg-slate-200 dark:bg-slate-700 rounded-xl overflow-hidden">
-              <img src={project.img} alt={project.name} className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">{project.name}</h3>
-                <div className="text-gray-600 dark:text-gray-300 text-sm mt-2 mb-4">
-                  {project.techs.join(", ")}
-                </div>
-                <div className="flex flex-col gap-3 justify-center">
-                  {Array.isArray(project.github_link) ? (
-                    project.github_link.map((link, idx) => (
-                      <a
-                        key={idx}
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-cyan-600 bg-gray-300 dark:text-cyan-600 dark:bg-gray-800 px-4 py-2 rounded"
-                      >
-                        GitHub Link {idx + 1}
-                      </a>
-                    ))
-                  ) : (
-                    <a
-                      href={project.github_link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-cyan-600 bg-gray-300 dark:text-cyan-600 dark:bg-gray-800 px-4 py-2 rounded"
-                    >
-                      GitHub
-                    </a>
-                  )}
-                </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="flex gap-10 px-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+        style={{ scrollBehavior: "smooth" }}
+      >
+        {projects.map((project, i) => (
+          <motion.div
+            key={i}
+            whileHover={{ rotateY: 8, rotateX: -8, scale: 1.03 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="min-w-[340px] md:min-w-[420px] bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl overflow-hidden snap-center"
+          >
+            <img src={project.img} className="h-56 w-full object-cover" />
+            <div className="p-5">
+              <h3 className="text-lg font-semibold text-cyan-500 mb-2">
+                {project.name}
+              </h3>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.techs.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="text-xs bg-cyan-500/10 text-cyan-500 px-2 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex gap-3 flex-wrap">
+                {project.github.map((link, idx) => (
+                  <a
+                    key={idx}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm bg-gray-900 text-white dark:bg-cyan-600 px-3 py-2 rounded hover:scale-105 transition"
+                  >
+                    <FaGithub /> Code {idx + 1}
+                  </a>
+                ))}
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm bg-cyan-600 text-white px-3 py-2 rounded hover:scale-105 transition"
+                  >
+                    <FaExternalLinkAlt /> Live
+                  </a>
+                )}
               </div>
             </div>
-          ))}
-        </div>
-        {visibleCount < projects.length && (
-          <div className="text-center mt-8">
-            <button
-              onClick={handleSeeMore}
-              className="text-cyan-600 bg-gray-300 dark:text-cyan-600 dark:bg-gray-800 px-4 py-2 rounded"
-            >
-              See More
-            </button>
-          </div>
-        )}
-      </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 }

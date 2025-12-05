@@ -8,6 +8,9 @@ import Hireme from "../components/Hireme";
 import Navbar from "../components/Navbar";
 import Project from "../components/Project";
 import Skills from "../components/Skills";
+import Education from '../components/Education';
+import Experience from '../components/Experience';
+import Certifications from '../components/Certifications';
 
 export default function HomePage() {
   return (
@@ -19,6 +22,9 @@ export default function HomePage() {
    <Skills/>
    <Project/>
    {/* <Hireme/> */}
+   <Experience/>
+   <Education/>
+   <Certifications/>
    <Contact/>
    <Footer/>
     </div>

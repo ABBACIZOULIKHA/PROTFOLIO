@@ -9,3 +9,15 @@ html {
 body {
   @apply box-border bg-gray-900 text-gray-100;
 }
+
+
+/* Hide scrollbar for Chrome, Edge and Safari */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}

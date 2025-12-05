@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,18 +16,18 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Prepare the template parameters
     const templateParams = {
       name: formData.name,
       email: formData.email,
       message: formData.message,
-      to_email: 'kz_abbaci@esi.dz'  // Specify your receiving email here
+      to_email: 'kz_abbaci@esi.dz'
     };
 
     emailjs.send('service_mr4onqk', 'template_xwy4kzs', templateParams, 'nSjatl6c_3S-U3Mjt')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
       })
       .catch((err) => {
         console.error('FAILED...', err);
@@ -36,71 +37,159 @@ export default function Contact() {
 
   const contact_info = [
     { logo: "mail", text: "kz_abbaci@esi.dz" },
-    { logo: "logo-whatsapp", text: "0793921328" },
-    {
-      logo: "location",
-      text: "Algeria",
-    },
+    { logo: "logo-whatsapp", text: "(+213) 793921328" },
+    { logo: "location", text: "Algeria" },
   ];
 
   return (
-    <section 
-      id="contact" 
-      className="flex items-center justify-center min-h-screen py-5 px-3 w-full bg-white/60 text-gray-900 dark:text-white dark:bg-gray-900"
-    >
-      <div className="text-center mt-8 w-2/3">
-        <h3 className="text-4xl font-semibold">
-          Contact <span className="text-cyan-600">Me</span>
-        </h3>
-        <p className="text-gray-400 mt-3 text-lg">Get in touch</p>
+  <section
+    id="contact"
+    className="relative flex items-center justify-center min-h-screen px-4 py-16 bg-gradient-to-br from-white via-cyan-50 to-white dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 text-gray-900 dark:text-white overflow-hidden"
+  >
 
-        <div
-          className="mt-8 flex md:flex-row flex-col gap-6 max-w-5xl bg-gray-200 dark:bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
-        >
-          <form className="flex flex-col flex-1 gap-5" onSubmit={handleSubmit}>
-            <input 
-              type="text" 
-              name="name" 
-              placeholder="Your Name" 
-              className="rounded-sm px-2 py-1 bg-slate-50 text-cyan-600" 
-              value={formData.name} 
-              onChange={handleChange} 
-            />
-            <input 
-              type="email" 
-              name="email" 
-              placeholder="Your Email Address" 
-              className="rounded-sm px-2 py-1 bg-slate-50 text-cyan-600" 
-              value={formData.email} 
-              onChange={handleChange} 
-            />
-            <textarea 
-              name="message" 
-              placeholder="Your Message" 
-              className="rounded-sm px-2 py-1 bg-slate-50 text-cyan-600" 
-              rows={10} 
-              value={formData.message} 
-              onChange={handleChange} 
-            ></textarea>
-            <button type="submit" className="btn-primary w-fit bg-cyan-600 px-2 py-1 rounded-md">Send Message</button>
-          </form>
-          <div className="flex flex-col gap-7">
-            {contact_info.map((contact, i) => (
-              <div
-                key={i}
-                className="flex flex-row text-left gap-4 flex-wrap items-center"
-              >
-                <div className="min-w-[3.5rem] text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
-                  <ion-icon name={contact.logo}></ion-icon>
-                </div>
-                <p className="md:text-base text-sm break-words">
-                  {contact.text}
-                </p>
+    {/* BACKGROUND GLOW */}
+    <div className="absolute top-[-120px] right-[-120px] w-[380px] h-[380px] bg-cyan-500/20 blur-[140px] rounded-full"></div>
+    <div className="absolute bottom-[-120px] left-[-120px] w-[380px] h-[380px] bg-purple-500/10 blur-[140px] rounded-full"></div>
+
+    <div className="relative z-10 w-full max-w-6xl mx-auto">
+
+      {/* HEADER */}
+      <motion.h3
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-center text-4xl md:text-5xl font-bold tracking-wide"
+      >
+        Contact <span className="text-cyan-600">Me</span>
+      </motion.h3>
+
+      <p className="text-center text-gray-600 dark:text-gray-400 mt-3">
+        Let's build something great together
+      </p>
+
+      {/* CARD */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="
+          mt-12 flex flex-col md:flex-row gap-10
+          bg-white/70 dark:bg-gray-800/60
+          backdrop-blur-2xl
+          border border-gray-200 dark:border-gray-700
+          rounded-3xl p-8 shadow-xl
+        "
+      >
+
+        {/* FORM */}
+        <form className="flex flex-col flex-1 gap-6" onSubmit={handleSubmit}>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            className="
+              px-4 py-3 rounded-lg
+              bg-white dark:bg-gray-900
+              border border-gray-300 dark:border-gray-600
+              text-gray-800 dark:text-cyan-400
+              focus:ring-2 focus:ring-cyan-500
+              outline-none transition
+            "
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            className="
+              px-4 py-3 rounded-lg
+              bg-white dark:bg-gray-900
+              border border-gray-300 dark:border-gray-600
+              text-gray-800 dark:text-cyan-400
+              focus:ring-2 focus:ring-cyan-500
+              outline-none transition
+            "
+          />
+
+          <textarea
+            rows={7}
+            name="message"
+            placeholder="Your Message"
+            required
+            value={formData.message}
+            onChange={handleChange}
+            className="
+              px-4 py-3 rounded-lg
+              bg-white dark:bg-gray-900
+              border border-gray-300 dark:border-gray-600
+              text-gray-800 dark:text-cyan-400
+              focus:ring-2 focus:ring-cyan-500
+              outline-none transition
+            "
+          />
+
+          <motion.button
+            whileHover={{
+              scale: 1.06,
+              boxShadow: "0 0 30px rgba(34,211,238,0.6)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            type="submit"
+            className="
+              self-start mt-2
+              px-7 py-3 rounded-full
+              bg-cyan-600 hover:bg-cyan-500
+              text-white font-semibold
+              shadow-lg transition
+            "
+          >
+            Send Message
+          </motion.button>
+
+        </form>
+
+        {/* CONTACT INFO */}
+        <div className="flex flex-col gap-7 justify-center">
+
+          {contact_info.map((contact, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.06 }}
+              transition={{ type: "spring", stiffness: 200 }}
+              className="flex items-center gap-5"
+            >
+              <div className="
+                w-14 h-14
+                flex items-center justify-center
+                text-white text-2xl
+                rounded-full
+                bg-gradient-to-br from-cyan-500 to-blue-600
+                shadow-lg
+                hover:shadow-cyan-400/40 transition
+              ">
+                <ion-icon name={contact.logo}></ion-icon>
               </div>
-            ))}
-          </div>
+
+              <p className="text-gray-700 dark:text-gray-300 tracking-wide">
+                {contact.text}
+              </p>
+            </motion.div>
+          ))}
+
         </div>
-      </div>
-    </section>
-  );
+
+      </motion.div>
+    </div>
+  </section>
+);
+
 }

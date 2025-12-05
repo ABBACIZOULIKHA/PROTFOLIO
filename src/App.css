@@ -59,6 +59,12 @@ body.dark .App-link {
   color: var(--link-color-dark);
 }
 
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -66,4 +72,5 @@ body.dark .App-link {
   to {
     transform: rotate(360deg);
   }
+
 }
