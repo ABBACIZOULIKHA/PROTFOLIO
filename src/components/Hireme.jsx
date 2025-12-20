@@ -1,5 +1,4 @@
 import React from 'react'
-import hireMe from "../images/MyPhoto2.jpg"
 
 export default function Hireme() {
   return (
@@ -23,11 +22,7 @@ export default function Hireme() {
           </p>
           <button className="btn-primary mt-10">Say Hello</button>
         </div>
-        <img
-          src={hireMe}
-          alt=""
-          className="lg:h-[28rem] h-80 lg:absolute bottom-0 -right-3 object-cover"
-        />
+       
       </div>
     </section>
   );
