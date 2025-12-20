@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/PROTFOLIO/static/css/main.21a851a0.css",
-    "main.js": "/PROTFOLIO/static/js/main.0bf666df.js",
-    "static/media/MyPhoto2.jpg": "/PROTFOLIO/static/media/MyPhoto2.977e602c9914c02b3845.jpg",
+    "main.css": "/PROTFOLIO/static/css/main.299266f7.css",
+    "main.js": "/PROTFOLIO/static/js/main.ecfb4ccc.js",
     "static/media/Project14.png": "/PROTFOLIO/static/media/Project14.32081699d64eb4805b31.png",
     "static/media/project8.png": "/PROTFOLIO/static/media/project8.91c2f1c15bdea8e1c53f.png",
+    "static/media/Hero.jpg": "/PROTFOLIO/static/media/Hero.70d92442d635eb70c706.jpg",
     "static/media/Project13.png": "/PROTFOLIO/static/media/Project13.59e62ede9c90c5c57215.png",
     "static/media/VehiculeComparator.png": "/PROTFOLIO/static/media/VehiculeComparator.2c4d26ef9a7de0d32cba.png",
     "static/media/project7.png": "/PROTFOLIO/static/media/project7.34f69fde2203049cbab7.png",
@@ -21,7 +21,6 @@
     "static/media/EasyLaw.png": "/PROTFOLIO/static/media/EasyLaw.6d9ca7d1f4e33a1912f3.png",
     "static/media/Project12.png": "/PROTFOLIO/static/media/Project12.271fddb8ed45894cc3d8.png",
     "static/media/efset.png": "/PROTFOLIO/static/media/efset.2dc1d11c2809b942f4b7.png",
-    "static/media/Photo.png": "/PROTFOLIO/static/media/Photo.a60b387ccb027ccd1131.png",
     "static/media/viz_all.png": "/PROTFOLIO/static/media/viz_all.afd587a35376a897ccbc.png",
     "static/media/cnn.png": "/PROTFOLIO/static/media/cnn.5cfb0670eced938da648.png",
     "static/media/langchain.png": "/PROTFOLIO/static/media/langchain.ef7a11737838017c3937.png",
@@ -43,11 +42,11 @@
     "static/media/spring.png": "/PROTFOLIO/static/media/spring.6dd48006b9db67015821.png",
     "static/media/Ecommerce.png": "/PROTFOLIO/static/media/Ecommerce.5dfabb7f7b09cfd536c9.png",
     "index.html": "/PROTFOLIO/index.html",
-    "main.21a851a0.css.map": "/PROTFOLIO/static/css/main.21a851a0.css.map",
-    "main.0bf666df.js.map": "/PROTFOLIO/static/js/main.0bf666df.js.map"
+    "main.299266f7.css.map": "/PROTFOLIO/static/css/main.299266f7.css.map",
+    "main.ecfb4ccc.js.map": "/PROTFOLIO/static/js/main.ecfb4ccc.js.map"
   },
   "entrypoints": [
-    "static/css/main.21a851a0.css",
-    "static/js/main.0bf666df.js"
+    "static/css/main.299266f7.css",
+    "static/js/main.ecfb4ccc.js"
   ]
 }
